@@ -23,6 +23,8 @@ npm run dev
 
 Elle écoute sur `http://localhost:3000`. Vérification simple : `http://localhost:3000/api/health`.
 
+Sur un hébergement de type Node.js, le serveur lit `PORT` et `IP` fournis par la plateforme; `HOST` sert de solution de repli, puis l'écoute locale utilise `0.0.0.0`. Définir aussi `CLIENT_URL` avec l'origine exacte du site pour CORS, ainsi que les secrets de base de données et SMTP dans la configuration privée de l'hébergeur. Ne pas réutiliser les valeurs de développement en production.
+
 ## Routes
 
 | Méthode | Chemin | Résultat |

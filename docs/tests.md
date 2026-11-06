@@ -75,3 +75,10 @@ Contrôle effectué le 6 novembre 2026 avec les validateurs officiels du W3C. Le
 - `client/`: `npm run build` terminé avec succès (Vite 8.3.6). Avertissements de dépréciation Sass/Bootstrap et directives React Router seulement.
 - `client/`: `npm audit` — 0 vulnérabilité.
 - `api/`: `npm audit` — 0 vulnérabilité.
+- Le fallback Apache SPA `client/public/.htaccess` a été ajouté pour que les routes React profondes renvoient `index.html`; il sera à vérifier sur le serveur réel après déploiement.
+
+## Ajustements préparatoires à l'hébergement et images manquantes
+
+- L'API écoute maintenant sur `PORT` et `IP` fournis par l'hébergeur, avec `HOST` puis `0.0.0.0` en solutions de repli. `node --check api/src/server.js` a terminé sans erreur.
+- Le jeu de données ne fournit pas de photos d'artisans. Les fiches affichent désormais une illustration SVG locale avec un texte alternatif qui précise qu'il s'agit d'une image de remplacement; une vraie image de la base reste prioritaire si elle est ajoutée. La page 404 utilise une illustration SVG locale et un texte alternatif.
+- `npm run build` côté client a réussi après ces changements. Restent les avertissements non bloquants Sass/Bootstrap et React Router.

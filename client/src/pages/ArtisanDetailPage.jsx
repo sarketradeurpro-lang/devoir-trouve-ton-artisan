@@ -62,8 +62,12 @@ export default function ArtisanDetailPage() {
         </nav>
         <div className="detail-layout">
           <article className="artisan-profile">
-            <div className="artisan-photo" role="img" aria-label={`Illustration à ajouter pour ${artisan.nom}`}>
-              <span aria-hidden="true">✦</span><small>Photo ou logo de l’artisan</small>
+            <div className="artisan-photo">
+              <img
+                src={artisan.image || '/images/artisan-placeholder.svg'}
+                alt={artisan.image ? `Photo ou logo de ${artisan.nom}` : `Illustration de remplacement pour ${artisan.nom}`}
+              />
+              {!artisan.image && <small>Photo ou logo de l’artisan</small>}
             </div>
             <p className="eyebrow">{artisan.categorie}</p>
             <h1>{artisan.nom}</h1>

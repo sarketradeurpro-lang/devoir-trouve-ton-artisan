@@ -137,7 +137,7 @@ h1, h2, h3 { color: var(--artisan-ink); font-weight: 750; letter-spacing: -.035e
 .detail-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr); align-items: start; gap: 2rem; }
 .artisan-profile { min-width: 0; }
 .artisan-photo { min-height: 245px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .2rem; margin-bottom: 1.5rem; border-radius: .75rem; color: var(--artisan-blue-dark); background: #e5f1f8; }
-.artisan-photo > span { display: grid; width: 78px; height: 78px; place-items: center; border: 2px solid #bbd8e9; border-radius: 50%; background: #f5fbff; font-size: 2.3rem; }
+.artisan-photo img { display: block; width: 100%; height: 245px; border-radius: inherit; object-fit: cover; }
 .artisan-photo small { font-size: .8rem; }
 .artisan-profile h1 { margin: 0 0 .75rem; font-size: clamp(2rem, 3.2vw, 2.6rem); }
 .profile-trade { margin: .45rem 0; color: #596574; }
@@ -167,7 +167,7 @@ h1, h2, h3 { color: var(--artisan-ink); font-weight: 750; letter-spacing: -.035e
 .not-found-card { max-width: 640px; margin: .5rem auto; text-align: center; }
 .not-found-card__number { margin: 0; color: var(--artisan-blue-dark); font-size: clamp(4.5rem, 12vw, 7rem); font-weight: 800; letter-spacing: -.08em; line-height: 1; }
 .not-found-card__illustration { width: min(100%, 340px); height: 155px; display: grid; place-items: center; margin: 1rem auto; border-radius: .55rem; color: var(--artisan-blue-dark); background: #e5f1f8; }
-.not-found-card__illustration span { display: grid; width: 82px; height: 82px; place-items: center; border-radius: 50%; color: #fff; background: var(--artisan-blue); font-size: 3rem; font-weight: 750; }
+.not-found-card__illustration img { display: block; width: 100%; height: 100%; border-radius: inherit; object-fit: cover; }
 .not-found-card h1 { margin: .8rem 0 .4rem; font-size: 2rem; }
 .not-found-card > p:not(.not-found-card__number) { margin: 0 auto 1.3rem; color: #64707d; }
 .not-found-card .btn { padding: .7rem 1.2rem; border: 0; background: var(--artisan-blue); font-weight: 700; }

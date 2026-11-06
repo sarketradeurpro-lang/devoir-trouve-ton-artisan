@@ -48,7 +48,7 @@ npm install
 npm run dev
 ```
 
-Le client récupère les catégories, les artisans du mois, les listes filtrées/recherchées et les fiches depuis l'API. Son formulaire appelle aussi la route de contact. En local, renseigne un SMTP de test et garde `CONTACT_MAIL_MODE=test` dans `api/.env`; en production, `CONTACT_MAIL_MODE=artisan` envoie vers l'adresse enregistrée pour l'artisan.
+Le client récupère les catégories, les artisans du mois, les listes filtrées/recherchées et les fiches depuis l'API. Son formulaire appelle aussi la route de contact. Les images artisan manquantes utilisent une illustration de remplacement locale. En local, renseigne un SMTP de test et garde `CONTACT_MAIL_MODE=test` dans `api/.env`; en production, `CONTACT_MAIL_MODE=artisan` envoie vers l'adresse enregistrée pour l'artisan.
 
 ## API Node.js
 
@@ -57,6 +57,12 @@ Depuis PowerShell, ouvre un second terminal dans `api/` (garde le terminal du cl
 ## Configuration et sécurité
 
 Ne jamais committer un fichier `.env`, mot de passe, clé ou identifiant réel. Utiliser `api/.env.example` comme modèle, puis fournir les valeurs locales dans `api/.env` (ignoré par Git). Les paramètres d'e-mail des tests doivent pointer vers un service ou une boîte de test.
+
+## Mise en ligne
+
+La préparation et les étapes de déploiement sont documentées dans [docs/deploiement.md](docs/deploiement.md). Le déploiement public sera fait avec l'utilisateur; les secrets sont à saisir dans le panneau privé de l'hébergeur, jamais dans le dépôt.
+
+Le [PDF d'avancement](output/pdf/dossier-remise-avancement-trouve-ton-artisan.pdf) rassemble les éléments vérifiés à ce jour. Il n'est pas le dossier final : les captures et l'URL de production restent à ajouter.
 
 ## Sources et suivi
 

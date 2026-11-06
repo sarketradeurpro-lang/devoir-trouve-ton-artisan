@@ -8,7 +8,7 @@ export default function NotFoundPage() {
       <div className="container">
         <section className="not-found-card">
           <p className="not-found-card__number" aria-hidden="true">404</p>
-          <div className="not-found-card__illustration" role="img" aria-label="Illustration de page introuvable"><span>?</span></div>
+          <div className="not-found-card__illustration"><img src="/images/not-found.svg" alt="Illustration d’une page introuvable" /></div>
           <h1>Page non trouvée</h1>
           <p>La page que vous avez demandée n'existe pas ou a été déplacée.</p>
           <Link className="btn btn-primary" to="/">Retour à l'accueil</Link>

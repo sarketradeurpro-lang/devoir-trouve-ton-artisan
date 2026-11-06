@@ -4,7 +4,7 @@ Projet de devoir bilan : créer une plateforme qui aide les particuliers à trou
 
 ## État du projet
 
-Le client React, les scripts SQL et l'API Express/Sequelize sont présents et ont été lancés localement. Les principales routes API et le parcours principal du site ont été vérifiés avec MySQL. Les tests de contraintes SQL, l'envoi par boîte SMTP de test, les preuves visuelles, les maquettes Figma et le PDF final de remise restent à compléter.
+Le client React, l'API Express/Sequelize et les scripts SQL ont été vérifiés localement. Le dépôt GitHub public est disponible à l'adresse [sarketradeurpro-lang/devoir-trouve-ton-artisan](https://github.com/sarketradeurpro-lang/devoir-trouve-ton-artisan). Les dépendances API et client ont zéro vulnérabilité signalée par `npm audit`, la compilation de production du client réussit et le formulaire a été essayé avec une boîte de test Ethereal. Restent la mise en ligne du site, les captures de preuve et le dossier PDF final. Les maquettes Figma sont mises de côté pour l'instant à la demande de l'utilisateur; elles restent attendues dans le brief d'origine.
 
 ## Technologies imposées
 
@@ -61,3 +61,7 @@ Ne jamais committer un fichier `.env`, mot de passe, clé ou identifiant réel. 
 ## Sources et suivi
 
 Les consignes complètes sont dans `devoir objectif.odt`, `téléchargement (2).pdf` (brief), `téléchargement.pdf` (guide GitHub), `plan_maitre_trouve_ton_artisan.pdf` et `maquettes_trouve_ton_artisan.pdf`. Le résumé courant est dans `MEMOIRE-DEVOIR.md`; le suivi s'effectue par jalons selon `.agents/skills/suivi-artisan/SKILL.md`.
+
+## Où se trouvent les routes ?
+
+Les chemins de navigation du site sont déclarés dans `client/src/App.jsx`; les pages sont dans `client/src/pages/`. Les routes HTTP de l'API sont regroupées dans `api/src/routes/apiRoutes.js`, puis reliées aux fonctions de traitement dans `api/src/controllers/apiController.js`. Le dossier `routes` associe chaque adresse et méthode HTTP à son traitement; il sépare cette table de correspondance de la logique métier et des pages React.

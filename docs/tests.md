@@ -65,3 +65,13 @@ Le 6 novembre 2026, le premier `npm audit` API signalait trois vulnérabilités 
 ## Contrastes (vérification ciblée)
 
 Calculs de contraste sur les couleurs utilisées pour les éléments principaux, fond blanc/pâle : le bleu `#0074c7` atteint 4,86:1 sur blanc et 4,53:1 sur `#f1f8fc`; le texte blanc sur le bouton bleu atteint 4,86:1. Le texte d'erreur `#7d1d20` sur `#fff1f1` atteint 9,24:1. Le contour clavier et les bordures de champs initialement pâles ont été remplacés par bleu foncé `#00497c` (9,36:1 sur blanc) et gris `#7a8998` (3,58:1 sur blanc; 3,34:1 sur fond pâle). Après ces ajustements, `npm run build` a réussi; les avertissements Sass/Bootstrap et React Router persistent. Ces calculs ciblés ne remplacent pas un audit visuel et clavier complet.
+
+## Validateurs W3C (contrôle ciblé)
+
+Contrôle effectué le 6 novembre 2026 avec les validateurs officiels du W3C. Le shell statique `client/index.html` a retourné 0 erreur et 6 messages non bloquants. La feuille des styles propres au projet (partie personnalisée de `client/src/styles/main.scss`, sans l'import Bootstrap) a été acceptée par le validateur CSS3 avec 0 erreur et 0 avertissement. La feuille compilée complète incluant Bootstrap a retourné 24 erreurs et 133 avertissements selon ce profil CSS3; les erreurs observées comprennent des propriétés et sélecteurs de Bootstrap que ce profil du validateur ne reconnaît pas. Ce résultat combiné n'est donc pas présenté comme une validation W3C réussie. Le HTML vérifié est le shell avant rendu React : les pages hydratées et les contrôles d'accessibilité complets restent à auditer.
+
+### Vérification reproductible au 6 novembre 2026
+
+- `client/`: `npm run build` terminé avec succès (Vite 8.3.6). Avertissements de dépréciation Sass/Bootstrap et directives React Router seulement.
+- `client/`: `npm audit` — 0 vulnérabilité.
+- `api/`: `npm audit` — 0 vulnérabilité.

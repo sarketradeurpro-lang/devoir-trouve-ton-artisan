@@ -70,6 +70,8 @@ Calculs de contraste sur les couleurs utilisées pour les éléments principaux,
 
 Contrôle effectué le 6 novembre 2026 avec les validateurs officiels du W3C. Le shell statique `client/index.html` a retourné 0 erreur et 6 messages non bloquants. La feuille des styles propres au projet (partie personnalisée de `client/src/styles/main.scss`, sans l'import Bootstrap) a été acceptée par le validateur CSS3 avec 0 erreur et 0 avertissement. La feuille compilée complète incluant Bootstrap a retourné 24 erreurs et 133 avertissements selon ce profil CSS3; les erreurs observées comprennent des propriétés et sélecteurs de Bootstrap que ce profil du validateur ne reconnaît pas. Ce résultat combiné n'est donc pas présenté comme une validation W3C réussie. Le HTML vérifié est le shell avant rendu React : les pages hydratées et les contrôles d'accessibilité complets restent à auditer.
 
+La procédure pour vérifier le DOM React rendu, page par page, est dans [`validation-react-w3c.md`](validation-react-w3c.md). Les résultats initiaux ci-dessus ne portent pas sur ces pages hydratées.
+
 ### Vérification reproductible au 6 novembre 2026
 
 - `client/`: `npm run build` terminé avec succès (Vite 8.3.6). Avertissements de dépréciation Sass/Bootstrap et directives React Router seulement.

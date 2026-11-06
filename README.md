@@ -64,6 +64,8 @@ La préparation et les étapes de déploiement sont documentées dans [docs/depl
 
 Le [PDF d'avancement](output/pdf/dossier-remise-avancement-trouve-ton-artisan.pdf) rassemble les éléments vérifiés à ce jour. Il n'est pas le dossier final : les captures et l'URL de production restent à ajouter.
 
+La procédure pour vérifier les pages React avec le validateur W3C est dans [docs/validation-react-w3c.md](docs/validation-react-w3c.md).
+
 ## Sources et suivi
 
 Les consignes complètes sont dans `devoir objectif.odt`, `téléchargement (2).pdf` (brief), `téléchargement.pdf` (guide GitHub), `plan_maitre_trouve_ton_artisan.pdf` et `maquettes_trouve_ton_artisan.pdf`. Le résumé courant est dans `MEMOIRE-DEVOIR.md`; le suivi s'effectue par jalons selon `.agents/skills/suivi-artisan/SKILL.md`.

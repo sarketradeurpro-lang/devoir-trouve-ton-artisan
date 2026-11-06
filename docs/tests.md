@@ -72,6 +72,8 @@ Contrôle effectué le 6 novembre 2026 avec les validateurs officiels du W3C. Le
 
 La procédure pour vérifier le DOM React rendu, page par page, est dans [`validation-react-w3c.md`](validation-react-w3c.md). Les résultats initiaux ci-dessus ne portent pas sur ces pages hydratées.
 
+**État :** l'utilisateur a choisi de mettre de côté, pour l'instant, la validation W3C des pages React rendues. Ne pas la présenter comme terminée. La reprendre si l'utilisateur la redemande ou avant la remise finale.
+
 ### Vérification reproductible au 6 novembre 2026
 
 - `client/`: `npm run build` terminé avec succès (Vite 8.3.6). Avertissements de dépréciation Sass/Bootstrap et directives React Router seulement.
